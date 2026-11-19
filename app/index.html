@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies: official names, descriptions and grades, a checklist with saved progress, a roadmap to the platinum, and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Legend</h1>
+    <p class="subtitle">The offline trophy guide &amp; tracker — every official name, description and grade, a checklist that remembers, a roadmap to the platinum, and a cited guide for each trophy.</p>
+  </div>
+  <div class="progress-card" id="progressCard" aria-label="Overall progress">
+    <p class="progress-count"><span id="earnedCount">0</span><span class="progress-total"> / 55 earned</span></p>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <p class="progress-note" id="progressNote">0% to the platinum</p>
+    <p class="grade-counts" id="gradeCounts"></p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Guide sections">
+  <a href="#/" id="tabChecklist" class="tab">Checklist</a>
+  <a href="#/roadmap" id="tabRoadmap" class="tab">Roadmap to Platinum</a>
+  <a href="#/missables" id="tabMissables" class="tab">Missables <span class="tab-badge" id="missableCount"></span></a>
+</nav>
+
+<section class="toolbar" aria-label="Search and filters">
+  <label class="search-box">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+  <div class="chip-row" id="kindChips" role="group" aria-label="Filter by kind">
+    <button type="button" class="chip" data-kind="all">All</button>
+    <button type="button" class="chip" data-kind="story">Story</button>
+    <button type="button" class="chip" data-kind="missable">Missable</button>
+    <button type="button" class="chip" data-kind="collectible">Collectibles</button>
+    <button type="button" class="chip" data-kind="activity">Activities</button>
+    <button type="button" class="chip" data-kind="side">Side strands</button>
+    <button type="button" class="chip" data-kind="online">Online</button>
+  </div>
+  <div class="toolbar-right">
+    <label class="select-label">Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="select-label">Show
+      <select id="showState">
+        <option value="all">All trophies</option>
+        <option value="todo">Not earned yet</option>
+        <option value="earned">Earned</option>
+      </select>
+    </label>
+    <label class="spoiler-toggle"><input id="spoiler" type="checkbox"> Hide story spoilers</label>
+  </div>
+</section>
+
+<main class="layout">
+  <section class="list-pane" id="listPane" aria-label="Trophy list">
+    <p class="list-status" id="listStatus"></p>
+    <div id="trophyList"></div>
+    <div id="roadmapView" hidden></div>
+    <div id="missablesView" hidden></div>
+  </section>
+  <aside class="detail-pane" id="detailPane" aria-label="Trophy guide">
+    <div id="detailBody"></div>
+  </aside>
+</main>
+
+<footer class="footer">
+  <p><strong>Sources.</strong> Trophy names, descriptions and grades are the official PlayStation 5 list as published — see the <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase list</a> and <a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles</a> (grades and PSN progress targets). Every guide on this page is written for this entry, in its own words, from the official description alone; anything not yet checked inside the game says so next to the guide.</p>
+  <p><strong>Offline.</strong> This guide is plain files — it loads nothing from the network and works with the network off. Your progress is saved in this browser only (localStorage); use Export to keep a copy.</p>
+  <p class="footer-actions">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="resetBtn" type="button">Reset progress</button>
+  </p>
+  <p class="fineprint">An unofficial fan-made guide. Not affiliated with Rockstar Games or PlayStation. No Rockstar logo or official artwork is used here; the look is this guide's own.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
